@@ -12,7 +12,7 @@ public class PostServiceImpl implements PostService{
 
 
     private final List<Post> posts;
-    public PostServiceImpl(PostService postService) {
+    public PostServiceImpl() {
         this.posts = new ArrayList<>();
         posts.add( new Post("Post 1", UUID.randomUUID()));
         posts.add( new Post("Post 2", UUID.randomUUID()));
@@ -23,6 +23,7 @@ public class PostServiceImpl implements PostService{
     @Override
     public Post createPost(UUID id, String name, String description) {
         Post post = new Post(name, id);
+        post.setDescription(description);
         posts.add(post);
         return post;
     }

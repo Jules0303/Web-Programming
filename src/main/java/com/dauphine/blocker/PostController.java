@@ -22,7 +22,7 @@ public class PostController {
         return postService.createPost(post.getId(),post.getName(),post.getDescription());
     }
 
-    @GetMapping("/{id")
+    @GetMapping("/{id}")
     public Post GetPostbyId(UUID id){
         return postService.getPostById(id);
     }
