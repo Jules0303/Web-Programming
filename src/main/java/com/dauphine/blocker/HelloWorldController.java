@@ -29,7 +29,7 @@ public class HelloWorldController {
 
     @GetMapping("/hello")
     @Operation(summary = "Return Hello name with a request for the name")
-    public String Hello(@Parameter (description = "Name to greet") @RequestParam String name) {
+    public String Hello(@Parameter (description = "Name to greet")  @RequestParam String name) {
         return "Hello " + name;
     }
 }
